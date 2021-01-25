@@ -1,16 +1,25 @@
 import React from 'react'
+import ContextMenu from '../../tes'
+import WindowItems from '../window-items/window-items'
 import styles from './dekstop-layout.module.scss'
 function DekstopLayout() {
+    const [itemActive,setItemActive] = React.useState(false)
+    const handleClick = () =>{
+        setItemActive(false)
+    }
+    console.log(itemActive)
     return (
-        <div className={styles.dekstop} style={{backgroundImage: "url('./walpaper.jpg')"}}>
-           <div className={styles.itemContainer}>
-                <div className="flex flex-col  content-center text-center" style={{width: '10px',height: '10px',color: '#fff'}}>
-                    <i className="fas fa-trash"></i>
-                    <p>keranjang sampah</p>
-                </div>
+        <>
+              <ContextMenu/>
+
+        <div   className={styles.dekstop} style={{backgroundImage: "url('./walpaper.jpg')"}}>
+           <div className={styles.itemContainer} >
+               <WindowItems itemActive={itemActive} setItemActive={setItemActive}/>
+               <WindowItems itemActive={itemActive} setItemActive={setItemActive}/>
               
            </div>
         </div>
+        </>
 
     )
 }

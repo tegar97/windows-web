@@ -3,13 +3,17 @@
     background-repeat: none;
     height: 97%;
     background-position: center;
-    padding: 1rem .8rem;
+    padding: 1.5rem .8rem;
+    cursor: pointer;
+    position: relative;
+   
     
 }
 .itemContainer {
     display: grid;
     grid-template-columns: repeat(6, 80px);
-    grid-template-rows: repeat(7, 60px);    grid-auto-flow: column;
+    grid-template-rows: repeat(7, 60px);    
+    grid-auto-flow: column;
 
     gap: 20px;
 

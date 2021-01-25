@@ -1,0 +1,22 @@
+.windowItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 80px;
+    height: 90px;
+    z-index: 12412;
+    &:not(:first-child) {
+        margin-top: 1rem
+    }
+    
+    &:hover,:visited {
+        background-color: rgba(0,123,215,.3)
+        ;
+        
+        
+    }
+   
+}
+
