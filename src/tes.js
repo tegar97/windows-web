@@ -31,6 +31,7 @@ export default class ContextMenu extends React.Component {
         const rootH = this.root.offsetHeight;
         
         const right = (screenW - clickX) > rootW;
+        console.log(right)
         const left = !right;
         const top = (screenH - clickY) > rootH;
         const bottom = !top;
@@ -70,13 +71,7 @@ export default class ContextMenu extends React.Component {
         
         return(visible || null) && 
             <div ref={ref => {this.root = ref}} className="contextMenu">
-                <div className="contextMenu--option">Share this</div>
-                <div className="contextMenu--option">New window</div>
-                <div className="contextMenu--option">Visit official site</div>
-                <div className="contextMenu--option contextMenu--option__disabled">View full version</div>
-                <div className="contextMenu--option">Settings</div>
-                <div className="contextMenu--separator" />
-                <div className="contextMenu--option">About this app</div>
+              {this.props.children}
             </div>
     };
 }

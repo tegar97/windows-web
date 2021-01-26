@@ -1,0 +1,18 @@
+.navSearch{
+    height: 100%;
+    width: 20rem;
+    padding: 0 2.5rem;
+    outline: none;
+    color: #000;
+    &:hover{
+        border: 1px solid #000;
+    }
+    
+}
+.searchIcon{
+    color: rgba(0,0,0,.5);
+    position: absolute;
+    left: 10px;
+    top: 15px;
+
+}

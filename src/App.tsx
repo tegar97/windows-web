@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import styles from './app.module.scss'
 import DekstopLayout from './components/Dekstop-Layout/dekstop-layout';
 import ContextMenu from './tes'
+import NavbarLayout from './components/navbar/navbar-layout';
 function App() {
   useEffect(() => {
     document.addEventListener('contextmenu', () => console.log('yeah'));
@@ -14,7 +15,7 @@ function App() {
   return (
     <div className={styles.main}>
       <DekstopLayout />
-      <div className="bg-black" style={{height: '6%'}}>navbar</div>
+     <NavbarLayout/>
     </div>
   );
 }
